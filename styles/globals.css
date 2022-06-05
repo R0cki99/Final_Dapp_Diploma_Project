@@ -1,16 +1,588 @@
-html,
-body {
-  padding: 0;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* violet */
+  --primary-color: 111, 76, 255;
+  
+  /* white */
+  --text-color: 256, 256, 256;
+  --bg-image: url('https://storage.googleapis.com/graph-web/blog/Defi-web3/DeFi-Web3-desktop.jpg');
+  
+}
+
+
+
+.buttonContainer{
+  width: 100%;
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.btn {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 18px;
+  padding: 25px 90px;
+  
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  border-radius: 50px;
+}
+
+.btn:hover {
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: rgb(var(--primary-color));
+  border: 1px solid rgb(var(--primary-color));
+  color: rgb(var(--text-color));
+}
+
+.btn-primary2 {
+  background-color: green;
+  border: 1px solid green;
+  color: rgb(var(--text-color));
+}
+
+.btn-primary3 {
+  background-color: red;
+  border: 1px solid red;
+  color: rgb(var(--text-color));
+}
+/* https://thegraph.com/en/ */
+.btn-semi-transparent {
+  background-color: rgba(var(--primary-color), 2);
+  border: 1px solid rgba(var(--primary-color), 0.25);
+  color: rgba(var(--text-color), 0.8);
+}
+
+.btn-semi-transparent:hover {
+  background-color: rgba(var(--primary-color), 0.4);
+  border: 1px solid rgba(var(--primary-color), 1);
+  color: rgba(var(--text-color), 0.9);
+}
+
+.btn-glow:hover {
+  box-shadow: rgba(var(--primary-color), 0.5) 0px 0px 20px 0px;
+}
+
+/* https://sushi.com/ */
+.btn-gradient {
+  background-image: linear-gradient(to right, rgb(1 134 218), rgb(182 49 167));
+  border: 0;
+  color: rgba(var(--text-color));
+}
+
+/* https://sushi.com/ */
+.btn-gradient-border {
+  color: rgba(var(--text-color));
+  border: 2px double transparent;
+  background-image: linear-gradient(rgb(13, 14, 33), rgb(13, 14, 33)), radial-gradient(circle at left top, rgb(1, 110, 218), rgb(217, 0, 192));
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+.handlingInsuranceDiv{
+  margin-left: 1px;
+  width: 400px;
+}
+.accountInfo{
+  width: 100%;
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+  font-size: 18px;
+  color: white;
+  font-family: 'DM Sans', sans-serif;
+  text-shadow: 0 0 80px rgb(192 219 255 / 35%), 0 0 32px rgb(65 120 255 / 24%);
+   background: linear-gradient(to right, #30CFD0, #c43ad6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 30px;
+  margin-right: -1000px;
+}
+
+.nav{
+    background-color: black;
+    height: 130px;
+}
+
+.LegacyClass{
+  margin-left:  70px;
+}
+
+
+.header{
+  display: flex;
+  border-bottom: 1px solid rgba(0, 0, 0, .075);
+  padding: 20px 30px;
+  background-color: black;
+  height: 130px;
+  border-color: #c43ad6;
+}
+
+.titleContainer{
+  display: flex;
+  flex-direction: column;
+  padding-left: 15px;
+  margin-top: 20px;
+}
+
+.title{
+  margin-left: 30px;
+  font-weight: 500;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-size: 30px;
+  color: white;
+  font-family: 'DM Sans', sans-serif;
+  text-shadow: 0 0 80px rgb(192 219 255 / 35%), 0 0 32px rgb(65 120 255 / 24%);
+   background: linear-gradient(to right, #30CFD0, #c43ad6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-a {
-  color: inherit;
+.navIcon{
+    margin-top: 14px;
+    width: 50px;
+    color:white;
+    font-family: 'DM Sans', sans-serif;
+  text-shadow: 0 0 80px rgb(192 219 255 / 35%), 0 0 32px rgb(65 120 255 / 24%);
+   background: linear-gradient(to right, #30CFD0, #c43ad6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.ethIcon{
+  color: #000;
+}
+
+.centerTheButton5{
+  align-self: center;
+  margin-top: -25px;
+}
+
+.InsuranceFirstDiv{
+  margin-left: 25%;
+  margin-top: 122px;
+}
+.InsuranceFirstDiv2{
+  margin-left:200px;
+}
+.InsuranceFirstDiv3{
+  margin-left:150px;
+}
+
+.InsuranceFirstDiv5{
+    margin-left: 25%;
+  margin-top: 1px;
+}
+
+
+.boddy{
+  overflow: hidden;
+  background-image: var(--bg-image);
+
+}
+
+
+.boddy::before{
+    
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bodyINDEX {
+    
+    padding: 0;
+    font-family: sans-serif;
+    align-content: center;
+    margin-left: 3%;
+}
+
+.containerCC {
+    position: relative;
+    width: 1500px;
+    height: 600px;
+    margin: 240px auto;
+}
+
+
+
+.containerCC .box{
+    position: relative;
+    width: calc(500px - 40px);
+    height: calc(450px - 30px);
+    background: #000;
+    float: left;
+    margin: 15px;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+
+.containerCC .box .icon{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    transition: 0.5s;
+    z-index: 1;
+}
+
+.containerCC .box:hover .icon{
+    top: 20px;
+    left: calc(50% - 40px);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.containerCC .box .icon .fa{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 80px;
+    transition: 0.5s;
+    color: #fff;
+}
+
+.containerCC .box:hover .icon .fa{
+    font-size: 40px;
+    text-align: center;
+}
+
+.containerCC .box .content{
+    position: relative;
+    top: 100%;
+    height: calc(100% - 100px);
+    text-align: center;
+    box-sizing: border-box;
+    transition: 0.5s;
+    opacity: 0;
+    width: 100%;
+}
+.iconColor{
+          color: white;
+  font-family: 'DM Sans', sans-serif;
+  text-shadow: 0 0 80px rgb(192 219 255 / 35%), 0 0 32px rgb(65 120 255 / 24%);
+   background: linear-gradient(to right, #30CFD0, #c43ad6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+}
+
+#theUL, #theLI{
+    display: inline;
+}
+
+#theLI{
+  border: solid 1px;
+  border-color: #c43ad6;
+  font-size: 20px;
+  padding: 5px;
+  margin: 5px;
+  color: white;
+  background-color: #181816;   
+}
+
+
+.containerCC .box:hover .content{
+    top: 100px;
+    opacity: 1;
+    width: 200px;
+}
+
+.containerCC .box .content h3{
+  
+    font-size: 25px;
+    width: 300px;
+    margin-left: -110px;
+    align-self: center;
+    margin-top: 40px;
+      color: white;
+  font-family: 'DM Sans', sans-serif;
+  text-shadow: 0 0 80px rgb(192 219 255 / 35%), 0 0 32px rgb(65 120 255 / 24%);
+   background: linear-gradient(to right, #30CFD0, #c43ad6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 30px;
+  
+}
+
+
+.projectTitle {
+    align-self: center;   
+}
+
+.RuleSetClass {
+    width: 50%;
+    margin-left: 25%; 
+    border-radius: 1%;
+    background-color: black;
+    border: 2px solid black;
+}
+
+.BuySellHeadLines{
+    text-align: center;
+    color: black;
+   
+    margin: 0;
+}
+.BuySellHeadLines2{
+    text-align: center;
+      color:white;
+    font-family: 'DM Sans', sans-serif;
+  text-shadow: 0 0 80px rgb(192 219 255 / 35%), 0 0 32px rgb(65 120 255 / 24%);
+   background: linear-gradient(to right, #30CFD0, #c43ad6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.BuyerSellerParagraps{
+  color:white;
+    font-family: 'DM Sans', sans-serif;
+  background-image: linear-gradient(rgb(13, 14, 33), rgb(13, 14, 33)), radial-gradient(circle at left top, rgb(1, 110, 218), rgb(217, 0, 192));
+  font-size: 20px;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.Steps{
+  font-size: 30px;
+}
+
+.bodyBuyerSeller{
+   
+    margin: 0;
+    overflow: hidden;
+  background-image: var(--bg-image);
+    /* Full height */
+  height: 900px;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bodyBuyerSeller2{
+  margin: 0;
+  overflow: hidden;
+  background-image: var(--bg-image);
+    /* Full height */
+  height: 1200px;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.weekConverter{
+  margin-left: 100px;
+}
+.containerCCC {
+    width: 1700px;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boxx{
+    background-color: aqua;
+    margin-left: 11%;
+    padding: 20px;
+    width: 300px;
+    height: 200px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    border-radius: 1%;
+}
+.boxx2{
+    background-color: aqua;
+    margin-left: 220px;
+    margin-top: 100px;
+    padding: 20px;
+    width: 300px;
+    height: 200px;
+    margin-bottom: 100px;
+    border-radius: 1%;
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
   text-decoration: none;
+  cursor: pointer;
 }
 
-* {
-  box-sizing: border-box;
+.modal-header {
+  padding: 2px 16px;
+  background-image: linear-gradient(rgb(13, 14, 33), rgb(13, 14, 33)), radial-gradient(circle at left top, rgb(1, 110, 218), rgb(217, 0, 192));
+  color: white;
 }
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+  padding: 2px 16px;
+  background-image: linear-gradient(rgb(13, 14, 33), rgb(13, 14, 33)), radial-gradient(circle at left top, rgb(1, 110, 218), rgb(217, 0, 192));
+  color: white;
+}
+
+.RulsetButton{
+    background-color: #30CFD0;
+    align-self: center;
+}
+
+.centerTheButton{
+    margin-left: 31%;
+    margin-top: 33px;
+}
+.centerTheButton2{
+   margin-left: 43.5%;
+}
+
+.IconBuySell{
+  width: 300px;
+  height: 170px;
+  margin-left: 70px;
+  margin-top: 100px;
+}
+
+.marginButton{
+  margin-left: 14%;
+  height: 400px;
+  width: 400px;
+}
+
+.marginButton2{
+  height: 400px;
+  width: 400px;
+  margin-left: 100px;
+}
+
+.titleButtonBuySell{
+  margin-left: 30px;
+  font-size: 26px;
+}
+
+.Sellerback{
+  margin-left: 55px;
+}
+
+.centerTheButton3{
+  margin-left: 36.8%;
+}
+.centerTheButton4{
+  margin-left: 31%;
+}
+.modalFontSize{
+  font-size: 30px;
+
+}
+
+.Form1TestClass{
+  width: 600px;
+  margin-left: 33.5%;
+  
+  border-radius: 5%;
+}
+
+.SellerHeading{
+  text-align: center;
+    color:white;
+    font-family: 'DM Sans', sans-serif;
+  background-image: linear-gradient(rgb(13, 14, 33), rgb(13, 14, 33)), radial-gradient(circle at left top, rgb(1, 110, 218), rgb(217, 0, 192));
+  font-size: 20px;
+  -webkit-background-clip: text;
+  background-clip: text;
+
+}
+.marginffs{
+  margin-left: 77px;
+}
+
+.marginffs2{
+  margin-left: 202px;
+}
+.marginffs3{
+  margin-left: 107px;
+}
+
+.LegacyDiv1{
+  margin-left: 20%;
+}
+
+.LegacyDiv2{
+  margin-left: 15%;
+}
+
+.RequestClass{
+  margin-left: 31.7%;
+}
+
+#RequestClass2{
+  margin-top: 40px;
+}
+
