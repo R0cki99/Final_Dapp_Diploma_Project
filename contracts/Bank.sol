@@ -25,7 +25,7 @@ contract Bank {
     }
 
     function InitiateThirdPartyDeal(address addressFromBuyer, uint256 price) public payable{
-       // require(addressFromBuyer != msg.sender, "You put your own addrress");
+        require(addressFromBuyer != msg.sender, "You put your own addrress");
         if(addressFromBuyer == msg.sender){
             revert("You put your own addrres");
         }
@@ -41,7 +41,7 @@ contract Bank {
         require(addressFromSeller != msg.sender, "You put your own addrress");
         require(CheckLinkage[addressFromSeller] == msg.sender, "You are not the right Buyer!");
         require(LinkAddresses[msg.sender] == addressFromSeller, "You inputed the wrong Seller address!");
-        require(price >= assetPrice[addressFromSeller][msg.sender]);
+        require(price >= assetPrice[addressFromSeller][msg.sender], "You inputed the wrong amount");
         balance[LinkAddresses[msg.sender]][payable(msg.sender)] = msg.value;
     }
 

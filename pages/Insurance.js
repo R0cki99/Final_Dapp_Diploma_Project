@@ -202,8 +202,15 @@ export default function Home() {
                     </div>
                     <div className="modal-body">
                             <p className='BuyerSellerParagraps'>
-                                Here you must enter and pay the monthly costs for your medical insurance. <br></br>
-                                If you do not pay each month, you will not be able to withdraw the money you want
+                     This smart contract was initially designed with the purpose of simulating a medical insurance contract. 
+                     <br></br>
+                     If any user of the website wants to be insured by the Medical Insurance smart contract, he/she needs to pay the monthly costs of 0.25 ETH. 
+                     <br></br>
+                     If this requirement is not met, then the user will not be able to request a withdrawal for medical purposes.
+                     <br></br><br></br>
+                     After an user has requested an withdrawal it’s up to the smart contract’s manager to verify the provided information and approve or decline the request. 
+                     <br></br>
+                     If the request is approved, the requested amout of money will be sent from the smart contract to that user.
                             </p>
                     </div>
                     <div className="modal-footer">

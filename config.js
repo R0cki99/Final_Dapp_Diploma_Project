@@ -1,5 +1,5 @@
 
-  export const BankContract = "0xa513E6E4b8f2a923D98304ec87F64353C4D5C853"
-  export const LegacyContract = "0x2279B7A0a67DB372996a5FaB50D91eAA73d2eBe6"
-  export const InsuranceContract = "0x8A791620dd6260079BF849Dc5567aDC3F2FdC318"
+  export const BankContract = "0x30569a7B21e9Af754A00c338237a94390101B210"
+  export const LegacyContract = "0xE21ffce61b677D783D6f985339CDbF765cD16513"
+  export const InsuranceContract = "0x6282b1a5f7127574624122f5F250d5e96dEbcE1d"
   

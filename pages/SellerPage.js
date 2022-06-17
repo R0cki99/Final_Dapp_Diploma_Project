@@ -13,7 +13,6 @@ import Bank from '../artifacts/contracts/Bank.sol/Bank.json'
 
 export default function Home() {
     const [formInput, updateFormInput] = useState({ price: '', address: '' })
-    //const [loadingState, setLoadingState] = useState('not-loaded')
 
     async function InitiateThirdParty(){
         const web3Modal = new Web3Modal()
@@ -34,9 +33,6 @@ export default function Home() {
         }catch(error){
           toast.error("Please enter a valid amount")
         }
-        
-
-
     }
 
     async function SeeBalanceForMe(){

@@ -12,6 +12,7 @@ import detectEthereumProvider from '@metamask/detect-provider';
 import { ToastContainer, toast, Zoom, Bounce } from 'react-toastify'
 import "react-toastify/dist/ReactToastify.css"
 import axios from 'axios'
+
 const providerOptions = {
   /* See Provider Options Section */
 };
@@ -113,56 +114,5 @@ return(
     </div>
   )
 }
-/*
-   <div className={linkContainer}>
-          <Link href="/" >
-            <a className={link}>
-              Home
-            </a>
-          </Link>
-          {
-            /* if the signed in user is the contract owner, we */
-            /* show the nav link to create a new post 
-            (account === ownerAddress) && (
-              <Link href="/SellerPage">
-                <a className={link}>
-                  Create Post
-                </a>
-              </Link>
-            )
-          }
-        </div>
-        */
 
-/*
-const container = css`
-  padding: 40px;
-`
-*/
-
-  /*
-  return (
-    <div>
-      <nav className="border-b p-6 bg-zinc-900 w-screen h-25 m-0">
-      <p className="text-4xl font-bold grid place-items-center text-blue-700">Contract Factory</p>
-      <div className="flex mt-4">
-          <Link href="/">
-            <a className="mr-6 text-blue-700">
-              Home
-            </a>
-          </Link>
-        </div>
-        <div className='grid place-item-center bg-blue-500'>
-            
-        </div>
-      </nav>
-      
-          <Component {...pageProps} />
-      
-    </div>
-  )
-
-  
-}
-*/
 export default MyApp

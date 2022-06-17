@@ -13,12 +13,7 @@ import Legacy from '../artifacts/contracts/Legacy.sol/Legacy.json'
 import { toast } from 'react-toastify'
 
 export default function Home() {
-/*
-    Functions:
-    -> Check current balance for my address in the contract.
-   
-    -> Option 2: Alegi optiunea ca banii sa se vireze periodic(odata la X zile) si in valoare de Y pana cand nu mai ramane nimic.
-*/
+
         const [formInput, updateFormInput] = useState({ price: '', address: '', nrMinutes: '' })
 
         async function MakeDeposit(){
@@ -39,9 +34,7 @@ export default function Home() {
                   }
             }catch(error){
                toast.error("Please enter a valid amount")
-            }
-           
-      
+            }     
         }
         async function MakeDeposit2(){
             const web3Modal = new Web3Modal()
@@ -159,11 +152,9 @@ export default function Home() {
                     <div className="modal-body">
                             <p className='BuyerSellerParagraps'>
                 <h2>Option 1:</h2> <br></br>
-                Lock the money in the contract and you decide when to unlock and
-                send them back to your address <br></br>
-                           <h2>Option 2:</h2> <br></br>
-           Lock the money in the contract and you decide when to unlock and to witch address to
-                send them to.
+                The user locks his money in the smart contract for a specified amount of time and puts the condition that only him (only the crypto address  that locked the money ) will be able to withdraw the money from the smart contract after the specified amount of time has passed. <br></br>
+                           <br></br><h2>Option 2:</h2> <br></br>
+           The user locks his money in the smart contract for a specified amount of time and puts the condition that only the specified crypto address will be able to withdraw the money from the smart contract after the specified amount of time has passed.
                             </p>
                     </div>
                     <div className="modal-footer">
