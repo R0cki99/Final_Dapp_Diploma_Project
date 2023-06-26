@@ -12,7 +12,7 @@ import detectEthereumProvider from '@metamask/detect-provider';
 import { ToastContainer, toast, Zoom, Bounce } from 'react-toastify'
 import "react-toastify/dist/ReactToastify.css"
 import axios from 'axios'
-
+//Passed
 const providerOptions = {
   /* See Provider Options Section */
 };
